@@ -1,0 +1,8 @@
+#!/bin/sh
+
+dev_log="development.log"
+default_log=${default_log:-$dev_log}
+chosen_log=${1:-$default_log}
+
+echo "Erasing and tailing ${chosen_log}"
+cat /dev/null > log/${1:-$default_log} && tail -f log/${1:-$default_log}

@@ -1,0 +1,5 @@
+#!/bin/sh
+# Wipes the contents of a file
+
+echo "wiping  ${1}"
+cat /dev/null > $1

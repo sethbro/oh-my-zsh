@@ -1,0 +1,26 @@
+## ALIASES. 
+# BroPro is a Mac, so some of these may be OS X specific.
+
+alias ls="ls -C"
+alias ll="ls -aClhF"
+
+## Utility
+alias hosts='sudo vim /etc/hosts'
+alias flushdns='dscacheutil -flushcache'
+
+## Programs
+alias mysql="sudo /usr/local/mysql/bin/mysql"
+
+alias ss="cd $d_www/simplesites/"
+alias bro="cd $d_www/sethbro.com"
+alias gobro="thin start -C /etc/thin/sethbro.com.yml"
+
+alias tidy="cd ~/Downloads && mv *.avi *.mov *.mp4 *.flv *.mpg *.mpeg *.wmv ~/dwhelper/ && cd ~"
+alias add_music="cd ~/Downloads && mv *.mp3 ~/Music/iTunes/iTunes\ Media/Music/ && cd ~"
+
+
+# Flash
+export log_as="/Users/seth/Library/Preferences/Macromedia/Flash Player/Logs/flashlog.txt"
+alias mmcfg='vim /Library/Application\ Support/Macromedia/mm.cfg'
+alias wipe_as="wipe ${log_as}"
+

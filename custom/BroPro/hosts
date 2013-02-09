@@ -1,0 +1,3 @@
+## Hosts
+h_viv="s16848.gridserver.com"
+alias viv="ssh -A chrisvivion.com@${h_viv}"

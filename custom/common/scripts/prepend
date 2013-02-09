@@ -1,0 +1,5 @@
+#!/bin/sh
+# Prepends text to fild
+# Usage:
+#   $ prepend TEXT FILE
+echo $1 | cat - $2 > /tmp/out && mv /tmp/out $2

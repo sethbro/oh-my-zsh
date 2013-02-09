@@ -1,0 +1,6 @@
+#!/usr/bin/env/ruby
+
+require 'htmlentities'
+
+h = HTMLEntitities.new
+h.encode $1

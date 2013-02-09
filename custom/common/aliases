@@ -1,0 +1,47 @@
+# ========== SYSTEM
+alias resh=". ~/.zshrc"
+
+alias ls="ls --color"
+alias ll="ls -alhF --color"
+
+alias pubkey='cat ~/.ssh/id_rsa.pub'
+
+# Search
+ack_ignore="--ignore-dir=vendor --ignore-dir=coverage --ignore-dir=tmp --ignore-dir=reports --ignore-dir=bin --ignore-dir=db --ignore-dir=log --ignore-dir=app/assets/images"
+alias smack="ack ${ack_ignore}"
+
+alias www="cd ${d_www}"
+
+#
+# ========== SERVERS
+alias nrs='sudo nginx -s stop && sudo nginx'
+
+alias fproc="ps -ax | grep"
+alias servers="fproc thin"
+
+
+# ========== GEMS
+Export d_gems="/Users/seth/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems"
+alias gemdir="cd ${d_gems}"
+
+#
+# ========== RAILS
+alias b='bundle exec'
+
+alias rc="pry -r ./config/environment"
+
+export d_assets="app/assets"
+export d_img="app/assets/images"
+export d_css="$d_assets/stylesheets"
+export d_js="$d_assets/javascripts"
+
+# File navigation
+alias img="cd $d_img && ll"
+alias css="cd $d_css && ll"
+alias vcss="cd vendor/assets/stylesheets && ll"
+alias js="cd $d_js && ll"
+alias vjs="cd vendor/assets/javascripts && ll"
+alias jst="cd spec/javascripts/specs && ll"
+
+alias migrate_test="RAILS_ENV=test bundle exec rake db:migrate --trace"
+

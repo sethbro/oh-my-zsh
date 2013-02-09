@@ -1,0 +1,2 @@
+#!/bin/sh
+#mysqldump -u root -C -Q -c --allow-keywords database > filename | mysql -h hostname -u username -p password database

@@ -1,0 +1,42 @@
+## Git
+
+# Hub commands
+# http://github.com/defunkt/hub
+#eval "$(hub alias -s)"
+alias gpr='hub pull-request -b bellycard:master -h sethbro:`git rev-parse --symbolic-full-name --abbrev-ref HEAD` -i'
+
+# Github issues (ghi) commands
+alias ghim='ghi list --mine'
+
+# Custom script to create new remote tracking branch
+alias grb='git_remote_branch'
+
+alias gad='git add'
+alias gbr='git branch'
+alias gch='git whatchanged -p'
+alias gci='git commit -m'
+alias gdf='git diff'
+alias gpl='git pull --stat'
+alias gps='git push'
+alias gst='git status'
+alias gcp='git cherry-pick'
+
+alias unstage='git reset HEAD '
+
+alias gitout="git rebase --abort"
+alias gitup='git push upstream master'
+alias gitdown='git pull upstream master'
+alias gitwith='git rebase master'
+
+# These colors based on Solarized gem
+git_pretty="%n%C(red bold)==============================================================================%Creset"
+git_pretty="${git_pretty}%n%C(white)%h |%Creset  %C(yellow)%s%Creset%n"
+git_pretty="${git_pretty}        %C(white)|%Creset  %C(cyan dim)%an%Creset | %C(white)%cr%Creset | %cD%n"
+git_pretty="${git_pretty}%C(white dim)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%Creset"
+
+alias glog="git log --format='${git_pretty}' --graph --stat"
+alias myglog="glog --author='Seth'"
+
+alias gl="git log --reverse --format='%C(white)*%h* | %C(yellow)%s%Creset %C(white)| %C(cyan dim)%an%C(white) |%Creset'"
+alias mygl="gl --author='Seth' --max-count=25"
+

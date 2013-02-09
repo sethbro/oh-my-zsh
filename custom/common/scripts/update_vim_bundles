@@ -1,0 +1,67 @@
+#!/usr/bin/env ruby
+## http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
+
+git_bundles = [
+  "mileszs/ack.vim.git",
+  "tsaleh/vim-align.git",
+  "astashov/vim-ruby-debugger.git",
+  "scrooloose/nerdtree.git",
+  #"ddollar/nerdcommenter.git",
+  "kchmck/vim-coffee-script.git",
+  "tpope/vim-cucumber.git",
+  "tpope/vim-fugitive.git",
+  "vim-scripts/Gist.vim.git",
+  "vim-scripts/IndexedSearch.git",
+  "pangloss/vim-javascript.git",
+  "hallettj/jslint.vim.git",
+  "robgleeson/vim-markdown-preview.git",
+  "defunkt/mustache",
+  "vim-scripts/pbcopy.vim.git",
+  "tpope/vim-rails.git",
+  "tpope/vim-repeat.git",
+  "chrismetcalf/vim-scratch.git",
+  "rstacruz/sparkup.git",
+#  "tsaleh/vim-shoulda.git",
+  "msanders/snipmate.vim.git",
+  "vim-scripts/Specky.git",
+  "tsaleh/vim-supertab.git",
+  "tpope/vim-surround.git",
+  "tsaleh/vim-tcomment.git",
+  "tpope/vim-surround.git",
+  "michaeljsmith/vim-indent-object.git",
+  "tpope/vim-unimpaired.git",
+  "vim-scripts/ZoomWin.git"
+]
+
+syntax_bundles = [
+  "scrooloose/syntastic",
+  "vim-scripts/css3.git",
+  "tpope/vim-git.git",
+  "tpope/vim-haml.git",
+  "vim-scripts/HTML5-Syntax-File.git",
+  "pangloss/vim-javascript.git",
+  "tpope/vim-markdown.git",
+  "timcharper/textile.vim.git",
+  "vim-scripts/php.vim-html-enhanced.git",
+  "vim-ruby/vim-ruby.git"
+]
+
+color_bundles = [
+  "vim-scripts/mayansmoke.git",
+  "altercation/vim-colors-solarized.git",
+  "vim-scripts/xterm-color-table.vim.git",
+]
+
+git_bundles += syntax_bundles
+git_bundles += color_bundles 
+
+require 'fileutils'
+require 'open-uri'
+
+git_bundles.each do |url|
+  dir = ".vim/bundle/" + url.split('/').last.sub(/\.git$/, '')
+  url = "git://github.com/#{url}"
+  puts "  Adding submodule #{url} into #{dir}"
+  `git submodule add #{url} #{dir}`
+  #FileUtils.rm_rf(File.join(dir, ".git"))
+end

@@ -1,0 +1,11 @@
+export d_www=/opt/projects
+export d_gems=/Users/seth/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems
+
+PATH="/usr/local/Cellar:${PATH}"                  # Homebrew (Postgres)
+PATH="/usr/local/mysql/bin":${PATH}               # MySQL
+PATH="/usr/local/git":${PATH}                     # Git
+
+export PATH
+
+export EDITOR=/Applications/Sublime\ Text\ 2.app
+

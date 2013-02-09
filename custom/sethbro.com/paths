@@ -1,0 +1,3 @@
+export d_www=/opt/nginx/sites
+export_d_nginx=/opt/nginx/
+

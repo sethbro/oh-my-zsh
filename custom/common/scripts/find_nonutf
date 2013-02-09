@@ -1,0 +1,3 @@
+#!/bin/sh
+# Searches files & subdirectories for non-UTF-encoded files & lists filenames in file utf8_fail
+find . -type f | xargs -I {} zsh -c "iconv -f utf-8 -t utf-16 {} &>/dev/null || echo {}" > utf8_fail
