@@ -6,6 +6,9 @@ alias ll="ls -alhF --color"
 
 alias pubkey='cat ~/.ssh/id_rsa.pub'
 
+alias ohmy="cd $ZSH_CUSTOM"
+
+
 # Search
 ack_ignore="--ignore-dir=vendor --ignore-dir=coverage --ignore-dir=tmp --ignore-dir=reports --ignore-dir=bin --ignore-dir=db --ignore-dir=log --ignore-dir=app/assets/images"
 alias smack="ack ${ack_ignore}"
@@ -21,7 +24,7 @@ alias servers="fproc thin"
 
 
 # ========== GEMS
-Export d_gems="/Users/seth/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems"
+export d_gems="/Users/seth/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems"
 alias gemdir="cd ${d_gems}"
 
 #
