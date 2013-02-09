@@ -25,8 +25,6 @@
 * `zcu` aliases `zeus cucumber`
 * `zucumber` aliases `zeus cucumber`
 
-* `zspec` aliases `zeus rspec`
-
 * `zt` aliases `zeus test`
 * `zest` aliases `zeus test`
 
