@@ -15,6 +15,10 @@ alias ss="cd $d_www/simplesites/"
 alias bro="cd $d_www/sethbro.com"
 alias gobro="thin start -C /etc/thin/sethbro.com.yml"
 
+alias pi="cd $d_www/clearstory/place-it"
+
+alias vht="cd $d_www/vht/viewer"
+
 alias tidy="cd ~/Downloads && mv *.avi *.mov *.mp4 *.flv *.mpg *.mpeg *.wmv ~/dwhelper/ && cd ~"
 alias add_music="cd ~/Downloads && mv *.mp3 ~/Music/iTunes/iTunes\ Media/Music/ && cd ~"
 
