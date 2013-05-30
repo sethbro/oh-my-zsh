@@ -1,3 +1,4 @@
 export d_www=/opt/projects
-export d_gems=/Users/seth/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems
+export d_gems=/Users/seth/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems
+export d_nginx=/usr/local/etc/nginx
 

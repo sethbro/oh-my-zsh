@@ -1,10 +1,10 @@
-PATH="/usr/local/Cellar:$PATH"                  # Homebrew (Postgres)
-PATH="/usr/local/bin:/usr/local/share:$PATH"
-PATH="~/.rbenv/bin:~/.rbenv/shims:$PATH"        # rbenv
-PATH="$ZSH_CUSTOM/common/scripts:$PATH"         # User scripts
-PATH="ZSH_CUSTOM/$myhost/scripts:$PATH"
+PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+PATH="/usr/local/share/npm/bin:$PATH"       # node/npm
+PATH="~/.rbenv/bin:~/.rbenv/shims:$PATH"    # rbenv
+PATH="$ZSH_CUSTOM/common/scripts:$PATH"     # User scripts
+PATH="$ZSH_CUSTOM/$myhost/scripts:$PATH"
 
-export EDITOR=/Applications/Sublime\ Text\ 2.app
+export EDITOR=vim
 
 # Rbenv
 eval "$(rbenv init -)"

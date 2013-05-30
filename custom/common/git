@@ -3,7 +3,7 @@
 # Hub commands
 # http://github.com/defunkt/hub
 #eval "$(hub alias -s)"
-alias gpr='hub pull-request -b bellycard:master -h sethbro:`git rev-parse --symbolic-full-name --abbrev-ref HEAD` -i'
+alias gpr='hub pull-request -b clearstorydata:master -h sethbro:`git rev-parse --symbolic-full-name --abbrev-ref HEAD` -i'
 
 # Github issues (ghi) commands
 alias ghim='ghi list --mine'

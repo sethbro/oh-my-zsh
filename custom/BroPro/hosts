@@ -1,3 +1,6 @@
-## Hosts
-h_viv="s16848.gridserver.com"
-alias viv="ssh -A chrisvivion.com@${h_viv}"
+export d_cs="$d_www/clearstorydata"
+
+alias cs="cd $d_cs/story-webapp"
+alias csc="cd $d_cs/catalog-service"
+alias csl="cd $d_cs/services-ruby-client"
+

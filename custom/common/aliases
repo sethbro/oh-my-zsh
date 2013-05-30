@@ -9,18 +9,26 @@ alias pubkey='cat ~/.ssh/id_rsa.pub'
 alias ohmy="cd $ZSH_CUSTOM"
 
 
+# ========== UTILITY
+alias hosts='sudo vim /etc/hosts'
+alias flushdns='dscacheutil -flushcache'
+
+
 # Search
 ack_ignore="--ignore-dir=vendor --ignore-dir=coverage --ignore-dir=tmp --ignore-dir=reports --ignore-dir=bin --ignore-dir=db --ignore-dir=log --ignore-dir=app/assets/images"
 alias smack="ack ${ack_ignore}"
 
 alias www="cd ${d_www}"
 
-#
+
 # ========== SERVERS
+alias nconf="cd /usr/local/etc/nginx/conf"
 alias nrs='sudo nginx -s stop && sudo nginx'
 
 alias fproc="ps -ax | grep"
 alias servers="fproc thin"
+
+alias vagrant="nocorrect vagrant"
 
 
 # ========== GEMS

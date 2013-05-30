@@ -1,21 +1,19 @@
-## ALIASES. 
+## ALIASES 
 # BroPro is a Mac, so some of these may be OS X specific.
 
 alias ls="ls -C"
 alias ll="ls -aClhF"
 
-## Utility
-alias hosts='sudo vim /etc/hosts'
-alias flushdns='dscacheutil -flushcache'
+
+# ========== CLEARSTORY
+
+alias gopostgres="postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log"
+alias gocat="cd ${d_cs}/catalog-service/catalog-service && java -Ddw.http.port=6789 -jar ./target/catalog-service-0.2.14-SNAPSHOT.jar server local-test-config.yaml"
+alias gostory="cd $d_cs/story-webapp && bundle exec rails server thin -e development"
+alias gostoryaws="cd $d_cs/story-webapp && bundle exec rails server thin -e development_aws_catalog"
 
 ## Programs
 alias mysql="sudo /usr/local/mysql/bin/mysql"
-
-alias ss="cd $d_www/simplesites/"
-alias bro="cd $d_www/sethbro.com"
-alias gobro="thin start -C /etc/thin/sethbro.com.yml"
-
-alias pi="cd $d_www/clearstory/place-it"
 
 alias vht="cd $d_www/vht/viewer"
 

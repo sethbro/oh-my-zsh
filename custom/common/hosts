@@ -1,3 +1,8 @@
-export h_ve="72.10.39.76"
-alias ve="ssh -A build@${h_ve}"
+## Hosts
+h_viv="s16848.gridserver.com"
+alias viv="ssh -A chrisvivion.com@${h_viv}"
+
+alias bro="cd $d_www/sethbro.com"
+alias gobro="thin start -C /etc/thin/sethbro.com.yml"
+
 
