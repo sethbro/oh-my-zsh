@@ -1,0 +1,14 @@
+#!/bin/sh
+# git_delete_branch <branch_name>
+
+if [ $# -ne 1 ]; then
+  echo 1>&2 Usage: $0 branch_name
+  exit 127
+fi
+
+branch_name=$1
+echo "Deleting local ${branch_name}"
+git branch -d $branch_name
+echo "Deleting remote ${branch_name}"
+git push origin :$branch_name
+

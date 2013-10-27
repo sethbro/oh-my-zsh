@@ -6,7 +6,7 @@ alias ll="ls -alhF --color"
 
 alias pubkey='cat ~/.ssh/id_rsa.pub'
 
-alias ohmy="cd $ZSH_CUSTOM"
+alias omy="cd $ZSH_CUSTOM"
 
 
 # ========== UTILITY

@@ -4,3 +4,5 @@ alias cs="cd $d_cs/story-webapp"
 alias csc="cd $d_cs/catalog-service"
 alias csl="cd $d_cs/services-ruby-client"
 
+export h_csd_dev="10.1.1.141"
+export h_csd_staging="10.1.1.115"

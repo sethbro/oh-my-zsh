@@ -10,6 +10,9 @@ alias ghim='ghi list --mine'
 
 # Custom script to create new remote tracking branch
 alias grb='git_remote_branch'
+# Custom script to delete local && remote versions of branch
+alias gdl='git_delete_branch'
+
 
 alias gad='git add'
 alias gbr='git branch'
@@ -24,6 +27,7 @@ alias gcp='git cherry-pick'
 alias unstage='git reset HEAD '
 
 alias gitout="git rebase --abort"
+alias giton="git rebase --continue"
 alias gitup='git push upstream master'
 alias gitdown='git pull upstream master'
 alias gitwith='git rebase master'
@@ -37,6 +41,6 @@ git_pretty="${git_pretty}%C(white dim)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 alias glog="git log --format='${git_pretty}' --graph --stat"
 alias myglog="glog --author='Seth'"
 
-alias gl="git log --reverse --format='%C(white)*%h* | %C(yellow)%s%Creset %C(white)| %C(cyan dim)%an%C(white) |%Creset'"
+alias gl="git log --format='%C(white)*%h* | %C(yellow)%s%Creset %C(white)| %C(cyan dim)%an%C(white) |%Creset'"
 alias mygl="gl --author='Seth' --max-count=25"
 

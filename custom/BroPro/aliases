@@ -1,21 +1,25 @@
-## ALIASES 
+## ALIASES
 # BroPro is a Mac, so some of these may be OS X specific.
 
 alias ls="ls -C"
 alias ll="ls -aClhF"
 
 
-# ========== CLEARSTORY
-
+# ===== CLEARSTORY ===== #
 alias gopostgres="postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log"
-alias gocat="cd ${d_cs}/catalog-service/catalog-service && java -Ddw.http.port=6789 -jar ./target/catalog-service-0.2.14-SNAPSHOT.jar server local-test-config.yaml"
+alias gocat="cd ${d_cs}/catalog-service/catalog-service && java -Ddw.http.port=6789 -jar target/catalog-service-*-SNAPSHOT.jar server local-test-config.yaml"
 alias gostory="cd $d_cs/story-webapp && bundle exec rails server thin -e development"
-alias gostoryaws="cd $d_cs/story-webapp && bundle exec rails server thin -e development_aws_catalog"
+alias gostoryaws="cd $d_cs/story-webapp && bundle exec rails server thin -e development_aws"
+alias gostoryawscat="cd $d_cs/story-webapp && bundle exec rails server thin -e development_aws_catalog"
+alias gounicorn="sudo nginx && cd $d_cs/story-webapp && unicorn -c $d_cs/unicorn.rb"
 
-## Programs
+# SSH
+alias csd_dev="ssh -v $h_csd_dev"
+alias csd_staging="ssh -v $h_csd_staging"
+
+
+# ===== Programs ===== #
 alias mysql="sudo /usr/local/mysql/bin/mysql"
-
-alias vht="cd $d_www/vht/viewer"
 
 alias tidy="cd ~/Downloads && mv *.avi *.mov *.mp4 *.flv *.mpg *.mpeg *.wmv ~/dwhelper/ && cd ~"
 alias add_music="cd ~/Downloads && mv *.mp3 ~/Music/iTunes/iTunes\ Media/Music/ && cd ~"
