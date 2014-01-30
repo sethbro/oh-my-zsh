@@ -1,4 +1,5 @@
-# ========== SYSTEM
+
+# ===== SYSTEM ===== #
 alias resh=". ~/.zshrc"
 
 alias ls="ls --color"
@@ -9,10 +10,9 @@ alias pubkey='cat ~/.ssh/id_rsa.pub'
 alias omy="cd $ZSH_CUSTOM"
 
 
-# ========== UTILITY
+# ===== UTILITY ===== #
 alias hosts='sudo vim /etc/hosts'
 alias flushdns='dscacheutil -flushcache'
-
 
 # Search
 ack_ignore="--ignore-dir=vendor --ignore-dir=coverage --ignore-dir=tmp --ignore-dir=reports --ignore-dir=bin --ignore-dir=db --ignore-dir=log --ignore-dir=app/assets/images"
@@ -21,7 +21,7 @@ alias smack="ack ${ack_ignore}"
 alias www="cd ${d_www}"
 
 
-# ========== SERVERS
+# ===== SERVERS ===== #
 alias nconf="cd /usr/local/etc/nginx/conf"
 alias nrs='sudo nginx -s stop && sudo nginx'
 
@@ -31,15 +31,14 @@ alias servers="fproc thin"
 alias vagrant="nocorrect vagrant"
 
 
-# ========== GEMS
+# ===== GEMS ===== #
 export d_gems="/Users/seth/.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems"
 alias gemdir="cd ${d_gems}"
 
-#
-# ========== RAILS
+# ===== RAILS ===== #
 alias b='bundle exec'
 
-alias rc="pry -r ./config/environment"
+alias rc="bundle exec rails console"
 
 export d_assets="app/assets"
 export d_img="app/assets/images"
@@ -56,3 +55,15 @@ alias jst="cd spec/javascripts/specs && ll"
 
 alias migrate_test="RAILS_ENV=test bundle exec rake db:migrate --trace"
 
+
+# ===== PROGRAMS ===== #
+alias mysql="sudo /usr/local/mysql/bin/mysql"
+
+alias tidy="cd ~/Downloads && mv *.avi *.mov *.mp4 *.flv *.mpg *.mpeg *.wmv ~/dwhelper/ && cd ~"
+alias add_music="cd ~/Downloads && mv *.mp3 ~/Music/iTunes/iTunes\ Media/Music/ && cd ~"
+
+
+# Flash
+export log_as="/Users/seth/Library/Preferences/Macromedia/Flash Player/Logs/flashlog.txt"
+alias mmcfg='vim /Library/Application\ Support/Macromedia/mm.cfg'
+alias wipe_as="wipe ${log_as}"

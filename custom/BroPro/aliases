@@ -6,12 +6,19 @@ alias ll="ls -aClhF"
 
 
 # ===== CLEARSTORY ===== #
+
+# Directories
+alias cs="cd $d_cs/story-webapp"
+alias csc="cd $d_cs/catalog-service"
+alias csl="cd $d_cs/services-ruby-client"
+
+# Starting services
 alias gopostgres="postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log"
 alias gocat="cd ${d_cs}/catalog-service/catalog-service && java -Ddw.http.port=6789 -jar target/catalog-service-*-SNAPSHOT.jar server local-test-config.yaml"
-alias gostory="cd $d_cs/story-webapp && bundle exec rails server thin -e development"
-alias gostoryaws="cd $d_cs/story-webapp && bundle exec rails server thin -e development_aws"
-alias gostoryawscat="cd $d_cs/story-webapp && bundle exec rails server thin -e development_aws_catalog"
-alias gounicorn="sudo nginx && cd $d_cs/story-webapp && unicorn -c $d_cs/unicorn.rb"
+alias gostory="cs && bundle exec rails server -e development"
+alias gostoryaws="cs $d_cs/story-webapp && bundle exec rails server -e development_aws"
+alias gostoryawscat="cs $d_cs/story-webapp && bundle exec rails server -e development_aws_catalog"
+alias gounicorn="sudo nginx && cs && unicorn -c $d_cs/unicorn.rb"
 
 # SSH
 alias csd_dev="ssh -v $h_csd_dev"
@@ -19,14 +26,11 @@ alias csd_staging="ssh -v $h_csd_staging"
 
 
 # ===== Programs ===== #
-alias mysql="sudo /usr/local/mysql/bin/mysql"
 
-alias tidy="cd ~/Downloads && mv *.avi *.mov *.mp4 *.flv *.mpg *.mpeg *.wmv ~/dwhelper/ && cd ~"
-alias add_music="cd ~/Downloads && mv *.mp3 ~/Music/iTunes/iTunes\ Media/Music/ && cd ~"
-
-
-# Flash
-export log_as="/Users/seth/Library/Preferences/Macromedia/Flash Player/Logs/flashlog.txt"
-alias mmcfg='vim /Library/Application\ Support/Macromedia/mm.cfg'
-alias wipe_as="wipe ${log_as}"
+# Postgres
+alias dropcat="psql -h localhost postgres -c 'DROP DATABASE IF EXISTS catalog_service;'"
+alias newcat="psql -h localhost postgres -c 'CREATE DATABASE catalog_service;'"
+alias importcat="psql -h localhost postgres -c 'IMPORTING FILE' -d catalog_service -f snapshot/pg_dump.sql"
+alias rebuildcat="dropcat && newcat"
+alias updatecat="rebuildcat && cd $d_cs/demo-data && importcat && $d_cs/catalog-service/catalog-service-db && mvn flyway:migrate && echo 'Done'"
 
