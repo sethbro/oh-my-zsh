@@ -15,9 +15,9 @@ alias csl="cd $d_cs/services-ruby-client"
 # Starting services
 alias gopostgres="postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log"
 alias gocat="cd ${d_cs}/catalog-service/catalog-service && java -Ddw.http.port=6789 -jar target/catalog-service-*-SNAPSHOT.jar server local-test-config.yaml"
-alias gostory="cs && bundle exec rails server -e development"
-alias gostoryaws="cs $d_cs/story-webapp && bundle exec rails server -e development_aws"
-alias gostoryawscat="cs $d_cs/story-webapp && bundle exec rails server -e development_aws_catalog"
+alias gostory="cs && bundle exec rails server unicorn -e development"
+alias gostoryaws="cs && bundle exec rails server -e development_aws"
+alias gostoryawscat="cs && bundle exec rails server -e development_aws_catalog"
 alias gounicorn="sudo nginx && cs && unicorn -c $d_cs/unicorn.rb"
 
 # SSH
