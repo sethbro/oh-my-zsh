@@ -1,6 +1,6 @@
 . ~/.myhost
 
-INCLUDES=(paths env colors hosts git keys aliases)
+INCLUDES=(env paths colors hosts git keys aliases)
 for f in $INCLUDES
 do
   [[ -f $ZSH_CUSTOM/common/$f ]] && . $ZSH_CUSTOM/common/$f

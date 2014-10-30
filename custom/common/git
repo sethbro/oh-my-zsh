@@ -3,7 +3,8 @@
 # Hub commands
 # http://github.com/defunkt/hub
 #eval "$(hub alias -s)"
-alias gpr='hub pull-request -b clearstorydata:master -h sethbro:`git rev-parse --symbolic-full-name --abbrev-ref HEAD` -i'
+alias gpr='hub pull-request -b clearstorydata:master'
+alias gfpr='hub pull-request -b clearstorydata:freeze'
 
 # Github issues (ghi) commands
 alias ghim='ghi list --mine'
@@ -41,6 +42,6 @@ git_pretty="${git_pretty}%C(white dim)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 alias glog="git log --format='${git_pretty}' --graph --stat"
 alias myglog="glog --author='Seth'"
 
-alias gl="git log --format='%C(white)*%h* | %C(yellow)%s%Creset %C(white)| %C(cyan dim)%an%C(white) |%Creset'"
+alias gl="git log --format='%C(white) %h | %C(yellow)%s%Creset %C(white)| %C(cyan dim)%an%C(white) |%Creset'"
 alias mygl="gl --author='Seth' --max-count=25"
 

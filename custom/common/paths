@@ -1,7 +1,9 @@
 PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-PATH="/usr/local/share/npm/bin:$PATH"       # node/npm
-PATH="~/.rbenv/bin:~/.rbenv/shims:$PATH"    # rbenv
-PATH="$ZSH_CUSTOM/common/scripts:$PATH"     # User scripts
+PATH="$JAVA_HOME:$PATH"                             # Java
+PATH="/usr/local/share/npm/bin:$PATH"               # node/npm
+PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"    # rbenv
+PATH="/Users/seth/.local/lib/aws/bin:$PATH"         # AWS
+PATH="$ZSH_CUSTOM/common/scripts:$PATH"             # User scripts
 PATH="$ZSH_CUSTOM/$myhost/scripts:$PATH"
 PATH="/opt/projects/jeera:$PATH"
 
