@@ -1,8 +1,11 @@
 ## Hosts
-h_viv="s16848.gridserver.com"
-alias viv="ssh -A chrisvivion.com@${h_viv}"
+#h_viv="s16848.gridserver.com"
+#alias viv="ssh -A chrisvivion.com@${h_viv}"
 
-alias bro="cd $d_www/sethbro.com"
+h_digiocean='104.236.46.126'
+alias bro='ssh ${h_digiocean}'
+
+#alias bro="cd $d_www/sethbro.com"
 alias gobro="thin start -C /etc/thin/sethbro.com.yml"
 
 
