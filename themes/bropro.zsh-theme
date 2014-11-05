@@ -10,7 +10,7 @@ local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 # primary prompt
 PROMPT='%{$fg_bold[black]%}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~{$reset_color%}
-$fg_bold[cyan]%}___$fg_bold[black]}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~{$reset_color%}
+$fg_bold[cyan]%}✯ ✯ ✯ $fg_bold[black]}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~{$reset_color%}
 %{$fg_bold[cyan]%}%M |%{$reset_color%} \
 %{$fg[green]%}%1d\
 $(git_prompt_info) \
