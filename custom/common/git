@@ -30,7 +30,7 @@ alias unstage='git reset HEAD '
 alias gitout="git rebase --abort"
 alias giton="git rebase --continue"
 alias gitup='git push upstream master'
-alias gitdown='git pull upstream master'
+alias gitdown='git pull --rebase --stat upstream master'
 alias gitwith='git rebase master'
 
 # These colors based on Solarized gem

@@ -11,10 +11,12 @@ alias ll="ls -aClhF"
 alias cs="cd $d_cs/story-webapp"
 alias csc="cd $d_cs/catalog-service"
 alias csl="cd $d_cs/services-ruby-client"
+alias sb="cd $d_cs/story-webapp/storyboards-client"
+
 
 # Starting services
 alias gopostgres="postgres -D /usr/local/var/postgres -r /usr/local/var/postgres/server.log"
-alias gocat="cd ${d_cs}/catalog-service/catalog-service && java -Ddw.http.port=6789 -jar target/catalog-service_2.10-15.1.0-SNAPSHOT.jar server local-test-config.yaml"
+alias gocat="cd ${d_cs}/catalog-service/catalog-service && java -Ddw.http.port=6789 -jar ./target/catalog-service_2.10-*-SNAPSHOT.jar server local-test-config.yaml"
 alias gostory="cs && bundle exec rails server unicorn -e development"
 alias gostoryaws="cs && bundle exec rails server -e development_aws"
 alias gostoryawscat="cs && bundle exec rails server -e development_aws_catalog"
