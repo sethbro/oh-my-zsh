@@ -1,16 +1,16 @@
-# bropro.zsh-theme
+# BroCumulo.zsh-theme
 #
 # Author: Seth Bro
 # URL: http://sethbro.com
 # Repo: https://github.com/sethbro/oh-my-zsh
-# Direct Link: https://github.com/sethbro/oh-my-zsh/blob/master/themes/bropro.zsh-theme
+# Direct Link: https://github.com/sethbro/oh-my-zsh/blob/master/themes/BroCumulo.zsh-theme
 
 if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 # primary prompt
 PROMPT='%{$fg_bold[black]%}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~{$reset_color%}
-$fg[yellow]%}✯ ✯ ✯ $fg_bold[black]}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~{$reset_color%}
+$fg[white]%}☁' ☁' ☁' $fg_bold[black]}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~{$reset_color%}
 %{$fg_bold[cyan]%}%M |%{$reset_color%} \
 %{$fg[green]%}%1d\
 $(git_prompt_info) \
